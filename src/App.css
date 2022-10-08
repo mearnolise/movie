@@ -74,9 +74,13 @@
   max-width: 90%;
   margin: auto;
 }
-.grid-container {
-}
 
+.not-found-text {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
 /* movieCard */
 
 .card-container {

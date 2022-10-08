@@ -20,15 +20,21 @@ function Main() {
     <>
       <div className="main-container">
         <SearchForm cart={cart} />
-        <div className="grid-container">
-          <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={{ xs: 2, md: 3 }}>
-              {items.map((items) => (
-                <MovieCard key={items.id} items={items} />
-              ))}
-            </Grid>
-          </Box>
-        </div>
+        {items.length === 0 ? (
+          <p className="not-found-text ">Not Found !!!!</p>
+        ) : (
+          <>
+            <div className="grid-container">
+              <Box sx={{ flexGrow: 1 }}>
+                <Grid container spacing={{ xs: 2, md: 3 }}>
+                  {items.map((items) => (
+                    <MovieCard key={items.id} items={items} />
+                  ))}
+                </Grid>
+              </Box>
+            </div>
+          </>
+        )}
       </div>
     </>
   );
